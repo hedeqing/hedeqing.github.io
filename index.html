@@ -382,8 +382,9 @@ vcode = getpass.getpass()
 !echo {vcode} | google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret}
 </code></pre><p>   会出现验证网址点击进去复制回来确认即可</p>
 <h2 id="4-查看目录下的文件"><a href="#4-查看目录下的文件" class="headerlink" title="4. 查看目录下的文件"></a>4. 查看目录下的文件</h2><pre><code>!ls drive/
-</code></pre><h2 id="5-运行文件"><a href="#5-运行文件" class="headerlink" title="5. 运行文件"></a>5. 运行文件</h2><pre><code>!python3(your version) drive/app/mnist_cnn.py(your file_path)
-</code></pre><h2 id="6-提示"><a href="#6-提示" class="headerlink" title="6. 提示"></a>6. 提示</h2><p>每次创建一个colaboratory时都需要重新运行一次1，2，3，4步骤</p>
+</code></pre><h2 id="5-设定文件路径"><a href="#5-设定文件路径" class="headerlink" title="5. 设定文件路径"></a>5. 设定文件路径</h2><pre><code>path = !ls drive/app/animals.tfrecords(your path，记得前面加 ！ls)
+</code></pre><h2 id="6-运行文件"><a href="#6-运行文件" class="headerlink" title="6. 运行文件"></a>6. 运行文件</h2><pre><code>!python3(your version) drive/app/mnist_cnn.py(your file_path)
+</code></pre><h2 id="7-提示"><a href="#7-提示" class="headerlink" title="7. 提示"></a>7. 提示</h2><p>每次创建一个colaboratory时都需要重新运行一次1，2，3步骤</p>
 
           
         

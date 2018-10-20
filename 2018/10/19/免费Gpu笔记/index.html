@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="欢迎来到我的hexo">
 <meta property="og:description" content="Google gpu使用笔记（找不到drive文件路径）1. 创建账号，创建自己的文件夹可以上传自己的数据，文件等，关联自己的colaboratory notebooks，设置自己的gpu版本，修改&amp;gt;笔记本设置&amp;gt;python版本选择，gpu选择&amp;gt;保存2. 导包!pip install -U -q PyDrive from pydrive.auth import GoogleAut">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-20T03:09:38.863Z">
+<meta property="og:updated_time" content="2018-10-20T03:19:01.978Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Google免费Gpu使用">
 <meta name="twitter:description" content="Google gpu使用笔记（找不到drive文件路径）1. 创建账号，创建自己的文件夹可以上传自己的数据，文件等，关联自己的colaboratory notebooks，设置自己的gpu版本，修改&amp;gt;笔记本设置&amp;gt;python版本选择，gpu选择&amp;gt;保存2. 导包!pip install -U -q PyDrive from pydrive.auth import GoogleAut">
@@ -382,8 +382,9 @@ vcode = getpass.getpass()
 !echo {vcode} | google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret}
 </code></pre><p>   会出现验证网址点击进去复制回来确认即可</p>
 <h2 id="4-查看目录下的文件"><a href="#4-查看目录下的文件" class="headerlink" title="4. 查看目录下的文件"></a>4. 查看目录下的文件</h2><pre><code>!ls drive/
-</code></pre><h2 id="5-运行文件"><a href="#5-运行文件" class="headerlink" title="5. 运行文件"></a>5. 运行文件</h2><pre><code>!python3(your version) drive/app/mnist_cnn.py(your file_path)
-</code></pre><h2 id="6-提示"><a href="#6-提示" class="headerlink" title="6. 提示"></a>6. 提示</h2><p>每次创建一个colaboratory时都需要重新运行一次1，2，3，4步骤</p>
+</code></pre><h2 id="5-设定文件路径"><a href="#5-设定文件路径" class="headerlink" title="5. 设定文件路径"></a>5. 设定文件路径</h2><pre><code>path = !ls drive/app/animals.tfrecords(your path，记得前面加 ！ls)
+</code></pre><h2 id="6-运行文件"><a href="#6-运行文件" class="headerlink" title="6. 运行文件"></a>6. 运行文件</h2><pre><code>!python3(your version) drive/app/mnist_cnn.py(your file_path)
+</code></pre><h2 id="7-提示"><a href="#7-提示" class="headerlink" title="7. 提示"></a>7. 提示</h2><p>每次创建一个colaboratory时都需要重新运行一次1，2，3步骤</p>
 
       
     </div>
@@ -538,7 +539,7 @@ vcode = getpass.getpass()
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Google-gpu使用笔记（找不到drive文件路径）"><span class="nav-number">1.</span> <span class="nav-text">Google gpu使用笔记（找不到drive文件路径）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-创建账号，创建自己的文件夹可以上传自己的数据，文件等，关联自己的colaboratory-notebooks，设置自己的gpu版本，修改-gt-笔记本设置-gt-python版本选择，gpu选择-gt-保存"><span class="nav-number">1.1.</span> <span class="nav-text">1. 创建账号，创建自己的文件夹可以上传自己的数据，文件等，关联自己的colaboratory notebooks，设置自己的gpu版本，修改&gt;笔记本设置&gt;python版本选择，gpu选择&gt;保存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-导包"><span class="nav-number">1.2.</span> <span class="nav-text">2. 导包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-挂载drive"><span class="nav-number">1.3.</span> <span class="nav-text">3.挂载drive</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-查看目录下的文件"><span class="nav-number">1.4.</span> <span class="nav-text">4. 查看目录下的文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-运行文件"><span class="nav-number">1.5.</span> <span class="nav-text">5. 运行文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-提示"><span class="nav-number">1.6.</span> <span class="nav-text">6. 提示</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Google-gpu使用笔记（找不到drive文件路径）"><span class="nav-number">1.</span> <span class="nav-text">Google gpu使用笔记（找不到drive文件路径）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-创建账号，创建自己的文件夹可以上传自己的数据，文件等，关联自己的colaboratory-notebooks，设置自己的gpu版本，修改-gt-笔记本设置-gt-python版本选择，gpu选择-gt-保存"><span class="nav-number">1.1.</span> <span class="nav-text">1. 创建账号，创建自己的文件夹可以上传自己的数据，文件等，关联自己的colaboratory notebooks，设置自己的gpu版本，修改&gt;笔记本设置&gt;python版本选择，gpu选择&gt;保存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-导包"><span class="nav-number">1.2.</span> <span class="nav-text">2. 导包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-挂载drive"><span class="nav-number">1.3.</span> <span class="nav-text">3.挂载drive</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-查看目录下的文件"><span class="nav-number">1.4.</span> <span class="nav-text">4. 查看目录下的文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-设定文件路径"><span class="nav-number">1.5.</span> <span class="nav-text">5. 设定文件路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-运行文件"><span class="nav-number">1.6.</span> <span class="nav-text">6. 运行文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-提示"><span class="nav-number">1.7.</span> <span class="nav-text">7. 提示</span></a></li></ol></li></ol></div>
             
 
           </div>
