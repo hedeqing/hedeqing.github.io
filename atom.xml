@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-19T11:35:09.148Z</updated>
+  <updated>2018-10-20T02:26:47.432Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>免费Gpu使用</title>
+    <link href="http://yoursite.com/2018/10/19/%E5%85%8D%E8%B4%B9Gpu%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2018/10/19/免费Gpu笔记/</id>
+    <published>2018-10-19T14:27:04.000Z</published>
+    <updated>2018-10-20T02:26:47.432Z</updated>
+    
+    <content type="html"><![CDATA[<p>#Google gpu使用笔记（找不到drive文件路径）</p><p>##1. 创建账号，创建自己的文件夹可以上传自己的数据，文件等，关联自己的colaboratory notebooks，设置自己的gpu版本，修改&gt;笔记本设置&gt;python版本选择，gpu选择&gt;保存</p><p>##2.挂载drive<br>    !apt-get install -y -qq software-properties-common python-software-properties module<br>    init-tools</p><pre><code>!add-apt-repository -y ppa:alessandro-strada/ppa 2&gt;&amp;1 &gt; /dev/null!apt-get update -qq 2&gt;&amp;1 &gt; /dev/null!apt-get -y install -qq google-drive-ocamlfuse fuse</code></pre><p>   会出现验证网址点击进去复制回来确认即可</p><p>##</p><p>##3. 为colaboratory生成令牌</p><pre><code>from google.colab import auth auth.authenticate_user()</code></pre><h2 id="4-Generate-creds-for-the-Drive-FUSE-library"><a href="#4-Generate-creds-for-the-Drive-FUSE-library" class="headerlink" title="4. Generate creds for the Drive FUSE library"></a>4. Generate creds for the Drive FUSE library</h2><pre><code>from oauth2client.client import GoogleCredentials creds = GoogleCredentials.get_application_default()import getpass!google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret} &lt; /dev/null 2&gt;&amp;1 | grep URLvcode = getpass.getpass()!echo {vcode} | google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret}</code></pre><p>##5. 查看目录下的文件<br>    !ls drive/</p><p>##6. 运行文件<br>    !python3(your version) drive/app/mnist_cnn.py(your file_path)</p><p>##提示</p><p>每次创建一个colaboratory时都需要重新运行一次1，2，3，4步骤</p><h1 id=""><a href="#" class="headerlink" title=" "></a> </h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#Google gpu使用笔记（找不到drive文件路径）&lt;/p&gt;
+&lt;p&gt;##1. 创建账号，创建自己的文件夹可以上传自己的数据，文件等，关联自己的colaboratory notebooks，设置自己的gpu版本，修改&amp;gt;笔记本设置&amp;gt;python版本选择，gpu
+      
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
