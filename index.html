@@ -368,7 +368,7 @@ from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 from google.colab import auth
 from oauth2client.client import GoogleCredentials
-</code></pre><h2 id="3-挂载drive"><a href="#3-挂载drive" class="headerlink" title="3.挂载drive"></a>3.挂载drive</h2><pre><code>!apt-get install -y -qq software-properties-common python-software-properties module-init-tools
+</code></pre><h2 id="3-申请资源"><a href="#3-申请资源" class="headerlink" title="3.申请资源"></a>3.申请资源</h2><pre><code>!apt-get install -y -qq software-properties-common python-software-properties module-init-tools
 !add-apt-repository -y ppa:alessandro-strada/ppa 2&gt;&amp;1 &gt; /dev/null
 !apt-get update -qq 2&gt;&amp;1 &gt; /dev/null
 !apt-get -y install -qq google-drive-ocamlfuse fuse
@@ -381,10 +381,13 @@ import getpass
 vcode = getpass.getpass()
 !echo {vcode} | google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret}
 </code></pre><p>   会出现验证网址点击进去复制回来确认即可</p>
-<h2 id="4-查看目录下的文件"><a href="#4-查看目录下的文件" class="headerlink" title="4. 查看目录下的文件"></a>4. 查看目录下的文件</h2><pre><code>!ls drive/
-</code></pre><h2 id="5-设定文件路径"><a href="#5-设定文件路径" class="headerlink" title="5. 设定文件路径"></a>5. 设定文件路径</h2><pre><code>path = !ls drive/app/animals.tfrecords(your path，记得前面加 ！ls)
-</code></pre><h2 id="6-运行文件"><a href="#6-运行文件" class="headerlink" title="6. 运行文件"></a>6. 运行文件</h2><pre><code>!python3(your version) drive/app/mnist_cnn.py(your file_path)
-</code></pre><h2 id="7-提示"><a href="#7-提示" class="headerlink" title="7. 提示"></a>7. 提示</h2><p>每次创建一个colaboratory时都需要重新运行一次1，2，3步骤</p>
+<h2 id="4-挂载"><a href="#4-挂载" class="headerlink" title="4. 挂载"></a>4. 挂载</h2><pre><code>!mkdir -p drive
+
+!google-drive-ocamlfuse drive
+</code></pre><h2 id="5-查看目录下的文件"><a href="#5-查看目录下的文件" class="headerlink" title="5. 查看目录下的文件"></a>5. 查看目录下的文件</h2><pre><code>!ls drive/
+</code></pre><h2 id="6-设定文件路径"><a href="#6-设定文件路径" class="headerlink" title="6. 设定文件路径"></a>6. 设定文件路径</h2><pre><code>path = !ls drive/app/animals.tfrecords(your path，记得前面加 ！ls)
+</code></pre><h2 id="7-运行文件"><a href="#7-运行文件" class="headerlink" title="7. 运行文件"></a>7. 运行文件</h2><pre><code>!python3(your version) drive/app/mnist_cnn.py(your file_path)
+</code></pre><h2 id="8-提示"><a href="#8-提示" class="headerlink" title="8. 提示"></a>8. 提示</h2><p>每次创建一个colaboratory时都需要重新运行一次1，2，3步骤</p>
 
           
         
