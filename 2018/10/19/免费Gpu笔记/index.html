@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="欢迎来到我的hexo">
 <meta property="og:description" content="#Google gpu使用笔记（找不到drive文件路径） ##1. 创建账号，创建自己的文件夹可以上传自己的数据，文件等，关联自己的colaboratory notebooks，设置自己的gpu版本，修改&amp;gt;笔记本设置&amp;gt;python版本选择，gpu选择&amp;gt;保存 ##2.挂载drive !apt-get install -y -qq software-properties-commo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-20T02:29:30.575Z">
+<meta property="og:updated_time" content="2018-10-20T02:31:50.521Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="免费Gpu使用">
 <meta name="twitter:description" content="#Google gpu使用笔记（找不到drive文件路径） ##1. 创建账号，创建自己的文件夹可以上传自己的数据，文件等，关联自己的colaboratory notebooks，设置自己的gpu版本，修改&amp;gt;笔记本设置&amp;gt;python版本选择，gpu选择&amp;gt;保存 ##2.挂载drive !apt-get install -y -qq software-properties-commo">
@@ -387,9 +387,11 @@ import getpass
 vcode = getpass.getpass()
 
 !echo {vcode} | google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret}
-</code></pre><p>##5. 查看目录下的文件<br>    !ls drive/</p>
-<p>##6. 运行文件<br>    !python3(your version) drive/app/mnist_cnn.py(your file_path)</p>
-<p>##提示</p>
+</code></pre><p>##5. 查看目录下的文件</p>
+<pre><code>!ls drive/
+</code></pre><p>##6. 运行文件</p>
+<pre><code>!python3(your version) drive/app/mnist_cnn.py(your file_path)
+</code></pre><p>##提示</p>
 <p>每次创建一个colaboratory时都需要重新运行一次1，2，3，4步骤</p>
 <h1 id=""><a href="#" class="headerlink" title=" "></a> </h1>
       

@@ -387,9 +387,11 @@ import getpass
 vcode = getpass.getpass()
 
 !echo {vcode} | google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret}
-</code></pre><p>##5. 查看目录下的文件<br>    !ls drive/</p>
-<p>##6. 运行文件<br>    !python3(your version) drive/app/mnist_cnn.py(your file_path)</p>
-<p>##提示</p>
+</code></pre><p>##5. 查看目录下的文件</p>
+<pre><code>!ls drive/
+</code></pre><p>##6. 运行文件</p>
+<pre><code>!python3(your version) drive/app/mnist_cnn.py(your file_path)
+</code></pre><p>##提示</p>
 <p>每次创建一个colaboratory时都需要重新运行一次1，2，3，4步骤</p>
 <h1 id=""><a href="#" class="headerlink" title=" "></a> </h1>
           
