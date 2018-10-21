@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="笔记,">
 
 
 
@@ -81,13 +81,26 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="欢迎来到我的hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="1. tensorflow1.1 神经网络(python3.5)1.2 参数：权重W线上的权重w，用变量表示，随机给初始值 import tensorflow as tf  w = tf.Variable(tf.random_normal([2,3],stddev = 2,mean = 0,seed =1)) stddev: 标准差，mean: 均值,seed: 随机种子. tf.random_n">
+<meta name="keywords" content="笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tensorflow笔记">
+<meta property="og:url" content="http://yoursite.com/2018/10/21/tensorflow笔记/index.html">
 <meta property="og:site_name" content="欢迎来到我的hexo">
+<meta property="og:description" content="1. tensorflow1.1 神经网络(python3.5)1.2 参数：权重W线上的权重w，用变量表示，随机给初始值 import tensorflow as tf  w = tf.Variable(tf.random_normal([2,3],stddev = 2,mean = 0,seed =1)) stddev: 标准差，mean: 均值,seed: 随机种子. tf.random_n">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?\blacktriangledown">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?(w+1)^2">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?\blacktriangledown">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?=\frac{\partial&space;loss^2&space;}{\partial&space;w^2}=&space;2w+2">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?\small&space;Learningrate&space;=&space;LEARNINGRATEBASE*LEARNINGRATEDECAY*(\frac{globalstep}{LEARNINGRATESTEP})">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?\inline&space;\small&space;\frac{1+globalstep}{10+globalstep}">
+<meta property="og:image" content="https://i.imgur.com/UTPpWbQ.png">
+<meta property="og:updated_time" content="2018-10-21T13:25:29.119Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="欢迎来到我的hexo">
+<meta name="twitter:title" content="tensorflow笔记">
+<meta name="twitter:description" content="1. tensorflow1.1 神经网络(python3.5)1.2 参数：权重W线上的权重w，用变量表示，随机给初始值 import tensorflow as tf  w = tf.Variable(tf.random_normal([2,3],stddev = 2,mean = 0,seed =1)) stddev: 标准差，mean: 均值,seed: 随机种子. tf.random_n">
+<meta name="twitter:image" content="http://latex.codecogs.com/gif.latex?\blacktriangledown">
 
 
 
@@ -117,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2018/10/21/tensorflow笔记/">
 
 
 
 
 
-  <title>欢迎来到我的hexo</title>
+  <title>tensorflow笔记 | 欢迎来到我的hexo</title>
   
 
 
@@ -142,8 +155,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -276,9 +288,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -308,9 +320,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/21/tensorflow笔记/" itemprop="url">tensorflow笔记</a></h1>
+          <h1 class="post-title" itemprop="name headline">tensorflow笔记</h1>
         
 
         <div class="post-meta">
@@ -361,9 +371,7 @@
       
 
       
-        
-          
-            <h1 id="1-tensorflow"><a href="#1-tensorflow" class="headerlink" title="1. tensorflow"></a>1. tensorflow</h1><h2 id="1-1-神经网络-python3-5"><a href="#1-1-神经网络-python3-5" class="headerlink" title="1.1 神经网络(python3.5)"></a>1.1 神经网络(python3.5)</h2><h3 id="1-2-参数：权重W"><a href="#1-2-参数：权重W" class="headerlink" title="1.2 参数：权重W"></a>1.2 参数：权重W</h3><p>线上的权重w，用变量表示，随机给初始值</p>
+        <h1 id="1-tensorflow"><a href="#1-tensorflow" class="headerlink" title="1. tensorflow"></a>1. tensorflow</h1><h2 id="1-1-神经网络-python3-5"><a href="#1-1-神经网络-python3-5" class="headerlink" title="1.1 神经网络(python3.5)"></a>1.1 神经网络(python3.5)</h2><h3 id="1-2-参数：权重W"><a href="#1-2-参数：权重W" class="headerlink" title="1.2 参数：权重W"></a>1.2 参数：权重W</h3><p>线上的权重w，用变量表示，随机给初始值</p>
 <pre><code>import tensorflow as tf
 
 w = tf.Variable(tf.random_normal([2,3],stddev = 2,mean = 0,seed =1))
@@ -465,8 +473,6 @@ plt.scatter(X[0:,0],X[:,1],c = np.squeeze(Y_c))
 plt.show()
 </code></pre><p><img src="https://i.imgur.com/UTPpWbQ.png" alt=""></p>
 
-          
-        
       
     </div>
     
@@ -481,172 +487,36 @@ plt.show()
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/19/免费Gpu笔记/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="欢迎来到我的hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/19/免费Gpu笔记/" itemprop="url">Google免费Gpu使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-19T22:27:04+08:00">
-                2018-10-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
           
-            
-          
-			
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Google-gpu使用笔记（找不到drive文件路径）"><a href="#Google-gpu使用笔记（找不到drive文件路径）" class="headerlink" title="Google gpu使用笔记（找不到drive文件路径）"></a>Google gpu使用笔记（找不到drive文件路径）</h1><h2 id="1-创建账号，创建自己的文件夹可以上传自己的数据，文件等，关联自己的colaboratory-notebooks，设置自己的gpu版本，修改-gt-笔记本设置-gt-python版本选择，gpu选择-gt-保存"><a href="#1-创建账号，创建自己的文件夹可以上传自己的数据，文件等，关联自己的colaboratory-notebooks，设置自己的gpu版本，修改-gt-笔记本设置-gt-python版本选择，gpu选择-gt-保存" class="headerlink" title="1. 创建账号，创建自己的文件夹可以上传自己的数据，文件等，关联自己的colaboratory notebooks，设置自己的gpu版本，修改&gt;笔记本设置&gt;python版本选择，gpu选择&gt;保存"></a>1. 创建账号，创建自己的文件夹可以上传自己的数据，文件等，关联自己的colaboratory notebooks，设置自己的gpu版本，修改&gt;笔记本设置&gt;python版本选择，gpu选择&gt;保存</h2><h2 id="2-导包"><a href="#2-导包" class="headerlink" title="2. 导包"></a>2. 导包</h2><pre><code>!pip install -U -q PyDrive
-from pydrive.auth import GoogleAuth
-from pydrive.drive import GoogleDrive
-from google.colab import auth
-from oauth2client.client import GoogleCredentials
-</code></pre><h2 id="3-申请资源"><a href="#3-申请资源" class="headerlink" title="3.申请资源"></a>3.申请资源</h2><pre><code>!apt-get install -y -qq software-properties-common python-software-properties module-init-tools
-!add-apt-repository -y ppa:alessandro-strada/ppa 2&gt;&amp;1 &gt; /dev/null
-!apt-get update -qq 2&gt;&amp;1 &gt; /dev/null
-!apt-get -y install -qq google-drive-ocamlfuse fuse
-from google.colab import auth
-auth.authenticate_user()
-from oauth2client.client import GoogleCredentials
-creds = GoogleCredentials.get_application_default()
-import getpass
-!google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret} &lt; /dev/null 2&gt;&amp;1 | grep URL
-vcode = getpass.getpass()
-!echo {vcode} | google-drive-ocamlfuse -headless -id={creds.client_id} -secret={creds.client_secret}
-</code></pre><p>   会出现验证网址点击进去复制回来确认即可</p>
-<h2 id="4-挂载"><a href="#4-挂载" class="headerlink" title="4. 挂载"></a>4. 挂载</h2><pre><code>!mkdir -p drive
-
-!google-drive-ocamlfuse drive
-</code></pre><h2 id="5-查看目录下的文件"><a href="#5-查看目录下的文件" class="headerlink" title="5. 查看目录下的文件"></a>5. 查看目录下的文件</h2><pre><code>!ls drive/
-</code></pre><h2 id="6-上传文件"><a href="#6-上传文件" class="headerlink" title="6. 上传文件"></a>6. 上传文件</h2><pre><code>from google.colab import files
-
-uploaded = files.upload()
-
-for fn in uploaded.keys():
-      print(&apos;User uploaded file &quot;{name}&quot; with length {length} bytes&apos;.format(
-        name=fn, length=len(uploaded[fn])))
-</code></pre><h2 id="7-下载文件到本地系统"><a href="#7-下载文件到本地系统" class="headerlink" title="7. 下载文件到本地系统"></a>7. 下载文件到本地系统</h2><pre><code>from google.colab import files
-
-with open(&apos;example.txt&apos;, &apos;w&apos;) as f:
-  f.write(&apos;some content&apos;)
-
-files.download(&apos;example.txt&apos;)
-</code></pre><h2 id="8-运行文件"><a href="#8-运行文件" class="headerlink" title="8. 运行文件"></a>8. 运行文件</h2><pre><code>!python3(your version) drive/app/mnist_cnn.py(your file_path)
-</code></pre><h3 id="1-文件路径设置-示例"><a href="#1-文件路径设置-示例" class="headerlink" title="1.文件路径设置(示例)"></a>1.文件路径设置(示例)</h3><pre><code>open(&quot;drive/app/animals.tfrecords&quot;)
-</code></pre><h2 id="9-提示"><a href="#9-提示" class="headerlink" title="9. 提示"></a>9. 提示</h2><p>每次创建一个colaboratory时都需要重新运行一次1，2，3，4步骤</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/19/免费Gpu笔记/" rel="next" title="Google免费Gpu使用">
+                <i class="fa fa-chevron-left"></i> Google免费Gpu使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -656,10 +526,11 @@ files.download(&apos;example.txt&apos;)
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -667,6 +538,10 @@ files.download(&apos;example.txt&apos;)
 
 
           
+
+  
+
+
 
         </div>
         
@@ -687,8 +562,17 @@ files.download(&apos;example.txt&apos;)
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -748,6 +632,22 @@ files.download(&apos;example.txt&apos;)
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-tensorflow"><span class="nav-number">1.</span> <span class="nav-text">1. tensorflow</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-神经网络-python3-5"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 神经网络(python3.5)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-参数：权重W"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.2 参数：权重W</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-喂数据-op，运行的节点"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.3 喂数据(op，运行的节点)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-前向传播"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.4 前向传播</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-反向传播-更新参数"><span class="nav-number">1.1.4.</span> <span class="nav-text">1.5 反向传播(更新参数)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-1-损失函数"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">1.5.1 损失函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-2-均方误差：MSE"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">1.5.2 均方误差：MSE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-3-训练方法：以减少loss为优化目标"><span class="nav-number">1.1.4.3.</span> <span class="nav-text">1.5.3 训练方法：以减少loss为优化目标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5-4-学习率"><span class="nav-number">1.1.4.4.</span> <span class="nav-text">1.5.4 学习率</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-激活函数"><span class="nav-number">1.1.5.</span> <span class="nav-text">1.6 激活函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-NN复杂度"><span class="nav-number">1.1.6.</span> <span class="nav-text">1.7 NN复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-8-模型优化"><span class="nav-number">1.1.7.</span> <span class="nav-text">1.8 模型优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-8-1-损失函数loss，学习率learning-rate-滑动平均-ema-正则化regularization"><span class="nav-number">1.1.7.1.</span> <span class="nav-text">1.8.1 损失函数loss，学习率learning_rate,滑动平均 ema,正则化regularization</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-8-1-1-自定义损失函数"><span class="nav-number">1.1.7.1.1.</span> <span class="nav-text">1.8.1.1 自定义损失函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-8-1-2-交叉熵-cem"><span class="nav-number">1.1.7.1.2.</span> <span class="nav-text">1.8.1.2 交叉熵 cem</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-8-1-3-学习率：（每次权值更新的幅度）。"><span class="nav-number">1.1.7.1.3.</span> <span class="nav-text">1.8.1.3 学习率：（每次权值更新的幅度）。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-8-1-4-指数衰减学习率（根据轮数进行动态更新学习率）。"><span class="nav-number">1.1.7.1.4.</span> <span class="nav-text">1.8.1.4 指数衰减学习率（根据轮数进行动态更新学习率）。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-8-1-5-滑动平均（影子值）：-记录了每个参数一段时间内过往值的平均，增加了模型的泛化性。针对所有参数w-b"><span class="nav-number">1.1.7.1.5.</span> <span class="nav-text">1.8.1.5 滑动平均（影子值）： 记录了每个参数一段时间内过往值的平均，增加了模型的泛化性。针对所有参数w,b</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-8-1-6-正则化缓解过拟合（利用给w加权值，弱化训练数据的噪声-一般不正则化b）。"><span class="nav-number">1.1.7.1.6.</span> <span class="nav-text">1.8.1.6 正则化缓解过拟合（利用给w加权值，弱化训练数据的噪声,一般不正则化b）。</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -887,6 +787,10 @@ files.download(&apos;example.txt&apos;)
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
