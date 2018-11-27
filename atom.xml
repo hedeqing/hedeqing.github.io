@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-25T02:42:43.047Z</updated>
+  <updated>2018-11-27T13:28:09.136Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二分法</title>
+    <link href="http://yoursite.com/2018/11/27/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
+    <id>http://yoursite.com/2018/11/27/二分法/</id>
+    <published>2018-11-27T13:06:43.000Z</published>
+    <updated>2018-11-27T13:28:09.136Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="二分法求根推导"><a href="#二分法求根推导" class="headerlink" title="二分法求根推导"></a>二分法求根推导</h1><p>二分法其实就是确定某一个区间[a,b]内必定存在一个根，我们需要每次更新区间使得我们找到所需要找到德根</p><h2 id="1-0-截止"><a href="#1-0-截止" class="headerlink" title="1.0 截止"></a>1.0 截止</h2><p>截止条件:</p><p>   <em>1</em> 迭代一定的次数之后截止</p><p>   <em>2</em> 真实误差小于一定值之后截止<a href="https://www.codecogs.com/eqnedit.php?latex=(x^{new}-&space;x^{old})/x^{new}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(x^{new}-&space;x^{old})/x^{new}" title="(x^{new}- x^{old})/x^{new}"></a></p><p>   <em>3</em> 区间值小于一定值之后截止  例：abs(b-a)&lt;5e-5</p><h2 id="2-0-流程"><a href="#2-0-流程" class="headerlink" title="2.0 流程"></a>2.0 流程</h2><p>实现流程图</p><p><img src="https://i.imgur.com/qdEp6uw.png" alt=""></p><p>我们每次的迭代都需要判断x的值在哪个区间内，然后更新区间，如此下去知道截止条件出现</p><p>下面是我GitHub上面实现的python代码链接</p><p><a href="https://github.com/hedeqing/DataAnalysis" title="github" target="_blank" rel="noopener">https://github.com/hedeqing/DataAnalysis</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;二分法求根推导&quot;&gt;&lt;a href=&quot;#二分法求根推导&quot; class=&quot;headerlink&quot; title=&quot;二分法求根推导&quot;&gt;&lt;/a&gt;二分法求根推导&lt;/h1&gt;&lt;p&gt;二分法其实就是确定某一个区间[a,b]内必定存在一个根，我们需要每次更新区间使得我们找到所需要找到德
+      
+    
+    </summary>
+    
+    
+      <category term="notes" scheme="http://yoursite.com/tags/notes/"/>
+    
+  </entry>
   
   <entry>
     <title>java_EE入门之Html</title>
