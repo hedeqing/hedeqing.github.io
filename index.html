@@ -291,6 +291,138 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/27/试位法/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欢迎来到我的hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/27/试位法/" itemprop="url">试位法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-27T21:35:58+08:00">
+                2018-11-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+			
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="试位法推导"><a href="#试位法推导" class="headerlink" title="试位法推导"></a>试位法推导</h1><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>在二分法的一个缺点</p>
+<p>在等分区间的过程中，没有考虑端点函数值的大小，如果某<br>个端点函数值更加接近0，那么根很可能更加接近此端点。</p>
+<p>可行的方法是：</p>
+<p>通过端点作直线，直线与X轴的交点，端点表示改进根的估计值。因为在这个根的求解中用直线代替<br>了曲线，所以这个算法称为“试位法”—regula falsi method</p>
+<p>试位法虽然可以认为是二分法的改进，但不是说它就比二分法要<br>好(举例说明)。并且试位法还有一个主要缺陷：在迭代处理中，<br>一个划界点可能保持不动，这就可能导致很差的收敛性</p>
+<h2 id="截止"><a href="#截止" class="headerlink" title="截止"></a>截止</h2><p>截止条件与二分法的类似：</p>
+<p>   <em>1</em> 迭代一定的次数之后截止</p>
+<p>   <em>2</em> 真实误差小于一定值之后截止  <a href="https://www.codecogs.com/eqnedit.php?latex=(x^{new}-&space;x^{old})/x^{new}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(x^{new}-&space;x^{old})/x^{new}" title="(x^{new}- x^{old})/x^{new}"></a></p>
+<p>   <em>3</em> 区间值小于一定值之后截止      例：abs(b-a)&lt;5e-5</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p><img src="https://i.imgur.com/yXTAoCT.png" alt=""></p>
+<p>github链接奉上</p>
+<p><a href="https://github.com/hedeqing/DataAnalysis" title="github" target="_blank" rel="noopener">https://github.com/hedeqing/DataAnalysis</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/27/二分法/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -363,12 +495,12 @@
       
         
           
-            <h1 id="二分法求根推导"><a href="#二分法求根推导" class="headerlink" title="二分法求根推导"></a>二分法求根推导</h1><p>二分法其实就是确定某一个区间[a,b]内必定存在一个根，我们需要每次更新区间使得我们找到所需要找到德根</p>
-<h2 id="1-0-截止"><a href="#1-0-截止" class="headerlink" title="1.0 截止"></a>1.0 截止</h2><p>截止条件:</p>
+            <h1 id="二分法求根推导"><a href="#二分法求根推导" class="headerlink" title="二分法求根推导"></a>二分法求根推导</h1><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>二分法其实就是确定某一个区间[a,b]内必定存在一个根，我们需要每次更新区间使得我们找到所需要找到的根</p>
+<h2 id="截止"><a href="#截止" class="headerlink" title="截止"></a>截止</h2><p>截止条件:</p>
 <p>   <em>1</em> 迭代一定的次数之后截止</p>
 <p>   <em>2</em> 真实误差小于一定值之后截止<a href="https://www.codecogs.com/eqnedit.php?latex=(x^{new}-&space;x^{old})/x^{new}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(x^{new}-&space;x^{old})/x^{new}" title="(x^{new}- x^{old})/x^{new}"></a></p>
 <p>   <em>3</em> 区间值小于一定值之后截止  例：abs(b-a)&lt;5e-5</p>
-<h2 id="2-0-流程"><a href="#2-0-流程" class="headerlink" title="2.0 流程"></a>2.0 流程</h2><p>实现流程图</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>实现流程图</p>
 <p><img src="https://i.imgur.com/qdEp6uw.png" alt=""></p>
 <p>我们每次的迭代都需要判断x的值在哪个区间内，然后更新区间，如此下去知道截止条件出现</p>
 <p>下面是我GitHub上面实现的python代码链接</p>
@@ -1036,7 +1168,7 @@ files.download(&apos;example.txt&apos;)
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
