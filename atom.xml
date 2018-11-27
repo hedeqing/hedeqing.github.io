@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-27T14:23:37.394Z</updated>
+  <updated>2018-11-27T14:26:18.893Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>定点迭代</title>
+    <link href="http://yoursite.com/2018/11/27/%E5%AE%9A%E7%82%B9%E8%BF%AD%E4%BB%A3/"/>
+    <id>http://yoursite.com/2018/11/27/定点迭代/</id>
+    <published>2018-11-27T14:26:18.000Z</published>
+    <updated>2018-11-27T14:26:18.893Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>试位法</title>
